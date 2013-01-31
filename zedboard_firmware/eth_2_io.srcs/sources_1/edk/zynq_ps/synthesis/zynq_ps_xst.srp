@@ -1,0 +1,806 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "zynq_ps_xst.prj"
+Verilog Include Directory          : {"C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc7z020clg484-1
+Output File Name                   : "../implementation/zynq_ps.ngc"
+
+---- Source Options
+Top Module Name                    : zynq_ps
+
+---- Target Options
+Add IO Buffers                     : NO
+Global Maximum Fanout              : 10000
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" into library work
+Parsing entity <zynq_ps>.
+Parsing architecture <STRUCTURE> of entity <zynq_ps>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <zynq_ps> (architecture <STRUCTURE>) from library <work>.
+WARNING:HDLCompiler:634 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" Line 1007: Net <axi4lite_0_S_ARLEN[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" Line 1018: Net <axi4lite_0_S_AWLEN[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <zynq_ps>.
+    Related source file is "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd".
+    Set property "BOX_TYPE = user_black_box" for instance <zed_pmod_io_0>.
+    Set property "BOX_TYPE = user_black_box" for instance <processing_system7_0>.
+    Set property "BOX_TYPE = user_black_box" for instance <axi4lite_0>.
+    Set property "BOX_TYPE = user_black_box" for instance <LEDs_8Bits>.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_GMII_TXD> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_GMII_TXD> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <GPIO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <GPIO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_DATA_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_DATA_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_BUSVOLT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_DATA_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_DATA_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_BUSVOLT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TRACE_DATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <USB0_PORT_INDCTL> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <USB1_PORT_INDCTL> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_WID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARBURST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARLOCK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARSIZE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWBURST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWLOCK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWSIZE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARPROT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWPROT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARADDR> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWADDR> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_WDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARCACHE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARLEN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARQOS> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWCACHE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWLEN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWQOS> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_WSTRB> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_BRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_RRESP> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_BID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_RID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_RDATA> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_RCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_WCOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_RACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_WACOUNT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA0_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA1_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA2_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA3_DATYPE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FTMT_F2P_TRIGACK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FTMT_P2F_TRIG> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FTMT_P2F_DEBUG> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <EVENT_STANDBYWFE> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <EVENT_STANDBYWFI> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <CAN0_PHY_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <CAN1_PHY_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_GMII_TX_EN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_GMII_TX_ER> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_MDIO_MDC> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_MDIO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_MDIO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_DELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_DELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_PDELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_PDELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_PDELAY_RESP_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_PDELAY_RESP_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_SYNC_FRAME_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_PTP_SYNC_FRAME_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_SOF_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET0_SOF_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_GMII_TX_EN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_GMII_TX_ER> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_MDIO_MDC> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_MDIO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_MDIO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_DELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_DELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_PDELAY_REQ_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_PDELAY_REQ_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_PDELAY_RESP_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_PDELAY_RESP_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_SYNC_FRAME_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_PTP_SYNC_FRAME_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_SOF_RX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <ENET1_SOF_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C0_SDA_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C0_SDA_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C0_SCL_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C0_SCL_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C1_SDA_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C1_SDA_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C1_SCL_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <I2C1_SCL_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <PJTAG_TD_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <PJTAG_TD_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_CLK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_CMD_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_CMD_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_LED> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO0_BUSPOW> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_CLK> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_CMD_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_CMD_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_LED> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SDIO1_BUSPOW> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_SCLK_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_SCLK_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_MOSI_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_MOSI_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_MISO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_MISO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_SS_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_SS1_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_SS2_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI0_SS_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_SCLK_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_SCLK_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_MOSI_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_MOSI_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_MISO_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_MISO_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_SS_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_SS1_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_SS2_O> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <SPI1_SS_T> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <UART0_DTRN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <UART0_RTSN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <UART0_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <UART1_DTRN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <UART1_RTSN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <UART1_TX> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TTC0_WAVE0_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TTC0_WAVE1_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TTC0_WAVE2_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TTC1_WAVE0_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TTC1_WAVE1_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TTC1_WAVE2_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <WDT_RST_OUT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <TRACE_CTL> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <USB0_VBUS_PWRSELECT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <USB1_VBUS_PWRSELECT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP0_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_ARVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_AWVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_BREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_RREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_WLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <M_AXI_GP1_WVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP0_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_GP1_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_ACP_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP0_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP1_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP2_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_ARESETN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_ARREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_AWREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_BVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_RLAST> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_RVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <S_AXI_HP3_WREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA0_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA0_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA0_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA1_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA1_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA1_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA2_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA2_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA2_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA3_DAVALID> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA3_DRREADY> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <DMA3_RSTN> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FCLK_CLK3> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FCLK_CLK2> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FCLK_CLK1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FCLK_RESET3_N> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FCLK_RESET2_N> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <FCLK_RESET1_N> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <EVENT_EVENTO> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC_ABORT> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC2> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC3> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC4> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC5> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC6> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_DMAC7> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_SMC> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_QSPI> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_CTI> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_GPIO> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_USB0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_ENET0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_ENET_WAKE0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_SDIO0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_I2C0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_SPI0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_UART0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_CAN0> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_USB1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_ENET1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_ENET_WAKE1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_SDIO1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_I2C1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_SPI1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_UART1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1110: Output port <IRQ_P2F_CAN1> of the instance <processing_system7_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_ARESET_OUT_N> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_BUSER> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_RUSER> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWID> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWLEN> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWSIZE> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWBURST> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWLOCK> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWCACHE> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWPROT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWREGION> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWQOS> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_AWUSER> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_WID> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_WLAST> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_WUSER> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARID> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARLEN> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARSIZE> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARBURST> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARLOCK> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARCACHE> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARPROT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARREGION> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARQOS> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <M_AXI_ARUSER> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_RRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_TRANS_SEQ> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_ARB_GRANT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_TRANS_SEQ> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_ARB_GRANT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_TRANS_QUAL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_ACCEPT_CNT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_ACTIVE_THREAD> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_ACTIVE_TARGET> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_ACTIVE_REGION> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_ERROR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_TARGET> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_TRANS_QUAL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_ACCEPT_CNT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_ACTIVE_THREAD> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_ACTIVE_TARGET> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_ACTIVE_REGION> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_ERROR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_TARGET> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_B_TRANS_SEQ> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_R_BEAT_CNT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_R_TRANS_SEQ> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AW_ISSUING_CNT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_AR_ISSUING_CNT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_W_BEAT_CNT> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_W_TRANS_SEQ> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_BID_TARGET> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_RID_TARGET> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_ARADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_ARADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_AWADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_AWADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_RDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_WDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SR_SC_WDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_ARADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_ARADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_AWADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_AWADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_RDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_WDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SC_SF_WDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_ARADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_ARADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_AWADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_AWADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_RDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_WDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_SF_CB_WDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_ARADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_ARADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_AWADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_AWADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_RDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_WDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_CB_MF_WDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_ARADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_ARADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_AWADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_AWADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_RDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_WDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MF_MC_WDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_ARADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_ARADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_AWADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_AWADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_RDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_WDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MC_MP_WDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_ARADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_ARADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_AWADDR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_AWADDRCONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_BRESP> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_RDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_RDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_WDATA> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_MP_MR_WDATACONTROL> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <IRQ> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_AWREADY> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_WREADY> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_BVALID> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_ARREADY> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <S_AXI_CTRL_RVALID> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <INTERCONNECT_ARESET_OUT_N> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_BID_ERROR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1787: Output port <DEBUG_RID_ERROR> of the instance <axi4lite_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1995: Output port <GPIO_IO_T> of the instance <LEDs_8Bits> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1995: Output port <GPIO2_IO_O> of the instance <LEDs_8Bits> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1995: Output port <GPIO2_IO_T> of the instance <LEDs_8Bits> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\hdl\zynq_ps.vhd" line 1995: Output port <IP2INTC_Irpt> of the instance <LEDs_8Bits> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <axi4lite_0_S_ARLEN<7:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <axi4lite_0_S_AWLEN<7:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <zynq_ps> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../implementation/zynq_ps_processing_system7_0_wrapper.ngc>.
+Reading core <../implementation/zynq_ps_axi4lite_0_wrapper.ngc>.
+Reading core <../implementation/zynq_ps_zed_pmod_io_0_wrapper.ngc>.
+Reading core <../implementation/zynq_ps_leds_8bits_wrapper.ngc>.
+Loading core <zynq_ps_processing_system7_0_wrapper> for timing and area information for instance <processing_system7_0>.
+Loading core <zynq_ps_axi4lite_0_wrapper> for timing and area information for instance <axi4lite_0>.
+Loading core <zynq_ps_zed_pmod_io_0_wrapper> for timing and area information for instance <zed_pmod_io_0>.
+Loading core <zynq_ps_leds_8bits_wrapper> for timing and area information for instance <LEDs_8Bits>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+WARNING:Xst:528 - Multi-source in Unit <zynq_ps_processing_system7_0_wrapper> on signal <PS_SRSTB>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_SRSTB>
+   Output port PS7:PSSRSTB of instance <processing_system7_0/processing_system7_0/PS7_i>
+
+WARNING:Xst:528 - Multi-source in Unit <zynq_ps_processing_system7_0_wrapper> on signal <PS_CLK>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_CLK>
+   Output port PS7:PSCLK of instance <processing_system7_0/processing_system7_0/PS7_i>
+
+WARNING:Xst:528 - Multi-source in Unit <zynq_ps_processing_system7_0_wrapper> on signal <PS_PORB>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_PORB>
+   Output port PS7:PSPORB of instance <processing_system7_0/processing_system7_0/PS7_i>
+
+Optimizing unit <zynq_ps> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block zynq_ps, actual ratio is 0.
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : zynq_ps.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 505
+#      GND                         : 5
+#      INV                         : 99
+#      LUT2                        : 28
+#      LUT3                        : 79
+#      LUT4                        : 120
+#      LUT5                        : 64
+#      LUT6                        : 91
+#      MUXCY                       : 11
+#      MUXF7                       : 2
+#      VCC                         : 2
+#      XORCY                       : 4
+# FlipFlops/Latches                : 275
+#      FD                          : 49
+#      FDC                         : 9
+#      FDE                         : 69
+#      FDR                         : 43
+#      FDRE                        : 97
+#      FDSE                        : 8
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# Others                           : 1
+#      PS7                         : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             275  out of  106400     0%  
+ Number of Slice LUTs:                  489  out of  53200     0%  
+    Number used as Logic:               481  out of  53200     0%  
+    Number used as Memory:                8  out of  17400     0%  
+       Number used as SRL:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    555
+   Number with an unused Flip Flop:     280  out of    555    50%  
+   Number with an unused LUT:            66  out of    555    11%  
+   Number of fully used LUT-FF pairs:   209  out of    555    37%  
+   Number of unique control sets:        24
+
+IO Utilization: 
+ Number of IOs:                         170
+ Number of bonded IOBs:                   0  out of    200     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                    | Clock buffer(FF name)  | Load  |
+----------------------------------------------------------------+------------------------+-------+
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>| BUFG                   | 283   |
+----------------------------------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.972ns (Maximum Frequency: 251.762MHz)
+   Minimum input arrival time before clock: 2.296ns
+   Maximum output required time after clock: 3.225ns
+   Maximum combinational path delay: 0.000ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Clock period: 3.972ns (frequency: 251.762MHz)
+  Total number of paths / destination ports: 3282 / 579
+-------------------------------------------------------------------------
+Delay:               3.972ns (Levels of Logic = 7)
+  Source:            zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (FF)
+  Destination:       axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i (FF)
+  Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+  Destination Clock: processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 to axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.282   0.648  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt<3>)
+     LUT3:I0->O            3   0.053   0.616  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done1 (S_AXI_AWREADY)
+     end scope: 'zed_pmod_io_0:S_AXI_WREADY'
+     begin scope: 'axi4lite_0:M_AXI_WREADY<0>'
+     LUT3:I0->O            1   0.053   0.635  axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_WREADY1 (DEBUG_MC_MP_WDATACONTROL<1>)
+     LUT6:I2->O            4   0.053   0.433  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i)
+     LUT6:I5->O            3   0.053   0.427  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/w_complete_mux1 (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/w_complete_mux)
+     LUT6:I5->O            1   0.053   0.602  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW2 (N59)
+     LUT6:I3->O            2   0.053   0.000  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set)
+     FDR:D                     0.011          axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    ----------------------------------------
+    Total                      3.972ns (0.611ns logic, 3.361ns route)
+                                       (15.4% logic, 84.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Total number of paths / destination ports: 341 / 162
+-------------------------------------------------------------------------
+Offset:              2.296ns (Levels of Logic = 5)
+  Source:            processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WVALID (PAD)
+  Destination:       LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Destination Clock: processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WVALID to LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    PS7:MAXIGP0WVALID      7   0.000   0.000  processing_system7_0/PS7_i (M_AXI_GP0_WVALID)
+     end scope: 'processing_system7_0:M_AXI_GP0_WVALID'
+     begin scope: 'axi4lite_0:S_AXI_WVALID<0>'
+     LUT6:I0->O            2   0.053   0.608  axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/M_AXI_WVALID1 (M_AXI_WVALID<1>)
+     end scope: 'axi4lite_0:M_AXI_WVALID<1>'
+     begin scope: 'LEDs_8Bits:S_AXI_WVALID'
+     LUT3:I0->O            1   0.053   0.739  LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1 (LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1)
+     LUT6:I0->O            1   0.053   0.000  LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3 (LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In)
+     FDR:D                     0.011          LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    ----------------------------------------
+    Total                      2.296ns (0.949ns logic, 1.347ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Total number of paths / destination ports: 222 / 106
+-------------------------------------------------------------------------
+Offset:              3.225ns (Levels of Logic = 6)
+  Source:            zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (FF)
+  Destination:       processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WREADY (PAD)
+  Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 to processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.282   0.648  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt<3>)
+     LUT3:I0->O            3   0.053   0.616  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done1 (S_AXI_AWREADY)
+     end scope: 'zed_pmod_io_0:S_AXI_WREADY'
+     begin scope: 'axi4lite_0:M_AXI_WREADY<0>'
+     LUT3:I0->O            1   0.053   0.635  axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_WREADY1 (DEBUG_MC_MP_WDATACONTROL<1>)
+     LUT6:I2->O            4   0.053   0.433  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i)
+     LUT5:I4->O            1   0.053   0.399  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/si_wready1 (DEBUG_SF_CB_WDATACONTROL<1>)
+     end scope: 'axi4lite_0:S_AXI_WREADY<0>'
+     begin scope: 'processing_system7_0:M_AXI_GP0_WREADY'
+    PS7:MAXIGP0WREADY          0.000          processing_system7_0/PS7_i
+    ----------------------------------------
+    Total                      3.225ns (0.494ns logic, 2.731ns route)
+                                       (15.3% logic, 84.7% route)
+
+=========================================================================
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>
+----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------+---------+---------+---------+---------+
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|    3.972|         |         |         |
+----------------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.91 secs
+ 
+--> 
+
+Total memory usage is 489896 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :  431 (   0 filtered)
+

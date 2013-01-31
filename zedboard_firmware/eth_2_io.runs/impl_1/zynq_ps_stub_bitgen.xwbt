@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=C:\Xilinx\projects\eth_2_io\eth_2_io.runs\impl_1\zynq_ps_stub_routed.ncd
+OUTFILE=C:\Xilinx\projects\eth_2_io\eth_2_io.runs\impl_1\zynq_ps_stub.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=C:\Xilinx\projects\eth_2_io\eth_2_io.runs\impl_1
+LICENSE=ISE
+USER_INFO=206763326_127455_210178093_102

@@ -1,0 +1,1741 @@
+--------------------------------------------------------------------------------
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -o
+zynq_ps_stub.twr -v 30 -l 30 zynq_ps_stub_routed.ncd zynq_ps_stub.pcf
+
+Design file:              zynq_ps_stub_routed.ncd
+Physical constraint file: zynq_ps_stub.pcf
+Device,package,speed:     xc7z020,clg484,C,-1 (ADVANCED 1.04 2012-12-04)
+Report level:             verbose report, limited to 30 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3020 paths analyzed, 1127 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.888ns.
+--------------------------------------------------------------------------------
+Slack:                  1.112ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.863ns (Levels of Logic = 6)
+  Clock Path Skew:      0.010ns (1.558 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.AQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.A3      net (fanout=67)       1.887   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y106.B5     net (fanout=2)        0.299   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW1
+    SLICE_X26Y106.B2     net (fanout=1)        1.239   zynq_ps_i/axi4lite_0/N58
+    SLICE_X26Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.DX     net (fanout=1)        0.628   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.CLK    Tdick                 0.013   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.863ns (1.503ns logic, 7.360ns route)
+                                                       (17.0% logic, 83.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.150ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.479ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.336ns (1.382 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y85.A2      net (fanout=11)       2.575   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y85.A       Tilo                  0.124   USER_IO_10_OBUF
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_awvalid<0>1
+    SLICE_X26Y72.C1      net (fanout=2)        1.263   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_AWADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.DX      net (fanout=2)        0.512   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.058   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.479ns (1.608ns logic, 6.871ns route)
+                                                       (19.0% logic, 81.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.151ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.478ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.336ns (1.382 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y85.A2      net (fanout=11)       2.575   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y85.A       Tilo                  0.124   USER_IO_10_OBUF
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_awvalid<0>1
+    SLICE_X26Y72.C1      net (fanout=2)        1.263   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_AWADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.AX      net (fanout=2)        0.502   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.067   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.478ns (1.617ns logic, 6.861ns route)
+                                                       (19.1% logic, 80.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.164ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.811ns (Levels of Logic = 6)
+  Clock Path Skew:      0.010ns (1.558 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.CQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.A4      net (fanout=61)       1.835   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y106.B5     net (fanout=2)        0.299   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW1
+    SLICE_X26Y106.B2     net (fanout=1)        1.239   zynq_ps_i/axi4lite_0/N58
+    SLICE_X26Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.DX     net (fanout=1)        0.628   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.CLK    Tdick                 0.013   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.811ns (1.503ns logic, 7.308ns route)
+                                                       (17.1% logic, 82.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.230ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.749ns (Levels of Logic = 6)
+  Clock Path Skew:      0.014ns (1.558 - 1.544)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y51.CQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt[3]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3
+    SLICE_X27Y72.A1      net (fanout=7)        1.771   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt[3]
+    SLICE_X27Y72.AMUX    Tilo                  0.354   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y106.B5     net (fanout=2)        0.299   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW1
+    SLICE_X26Y106.B2     net (fanout=1)        1.239   zynq_ps_i/axi4lite_0/N58
+    SLICE_X26Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.DX     net (fanout=1)        0.628   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.CLK    Tdick                 0.013   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.749ns (1.505ns logic, 7.244ns route)
+                                                       (17.2% logic, 82.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.293ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.336ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.336ns (1.382 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y79.B1      net (fanout=11)       2.778   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y72.C5      net (fanout=4)        0.917   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.DX      net (fanout=2)        0.512   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.058   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.336ns (1.608ns logic, 6.728ns route)
+                                                       (19.3% logic, 80.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.294ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.335ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.336ns (1.382 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y79.B1      net (fanout=11)       2.778   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y72.C5      net (fanout=4)        0.917   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.AX      net (fanout=2)        0.502   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.067   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.335ns (1.617ns logic, 6.718ns route)
+                                                       (19.4% logic, 80.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.731ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.242ns (Levels of Logic = 6)
+  Clock Path Skew:      0.008ns (1.556 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.AQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.A3      net (fanout=67)       1.887   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y107.C1     net (fanout=2)        0.824   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y107.C      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1
+    SLICE_X27Y108.C6     net (fanout=3)        0.765   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_arready
+    SLICE_X27Y108.CLK    Tas                   0.093   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0_glue_set
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.242ns (1.459ns logic, 6.783ns route)
+                                                       (17.7% logic, 82.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.741ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1 (FF)
+  Destination:          zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i (OTHER)
+  Requirement:          10.000ns
+  Data Path Delay:      7.930ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.294ns (1.424 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1 to zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X27Y127.BQ        Tcko                  0.456   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc[1]
+                                                          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1
+    SLICE_X21Y43.C1         net (fanout=43)       4.646   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc[1]
+    SLICE_X21Y43.C          Tilo                  0.124   zynq_ps_i/axi4lite_0_S_RDATA[31]
+                                                          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rmesg_mux_inst/O<34>1
+    PS7_X0Y0.MAXIGP0RDATA31 net (fanout=1)        2.154   zynq_ps_i/axi4lite_0_S_RDATA[31]
+    PS7_X0Y0.MAXIGP0ACLK    Tpssdck_MAXIGP0RDATA  0.550   zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+                                                          zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+    ----------------------------------------------------  ---------------------------
+    Total                                         7.930ns (1.130ns logic, 6.800ns route)
+                                                          (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.753ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.170ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.042ns (0.814 - 0.856)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y77.A5      net (fanout=11)       2.969   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y106.B5     net (fanout=2)        0.299   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW1
+    SLICE_X26Y106.B2     net (fanout=1)        1.239   zynq_ps_i/axi4lite_0/N58
+    SLICE_X26Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.DX     net (fanout=1)        0.628   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+    SLICE_X26Y101.CLK    Tdick                 0.013   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    -------------------------------------------------  ---------------------------
+    Total                                      8.170ns (1.027ns logic, 7.143ns route)
+                                                       (12.6% logic, 87.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.783ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.190ns (Levels of Logic = 6)
+  Clock Path Skew:      0.008ns (1.556 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.CQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.A4      net (fanout=61)       1.835   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y107.C1     net (fanout=2)        0.824   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y107.C      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1
+    SLICE_X27Y108.C6     net (fanout=3)        0.765   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_arready
+    SLICE_X27Y108.CLK    Tas                   0.093   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0_glue_set
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.190ns (1.459ns logic, 6.731ns route)
+                                                       (17.8% logic, 82.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.828ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0 (FF)
+  Destination:          zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i (OTHER)
+  Requirement:          10.000ns
+  Data Path Delay:      7.843ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.294ns (1.424 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0 to zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X27Y127.AQ        Tcko                  0.456   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc[1]
+                                                          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0
+    SLICE_X20Y42.A2         net (fanout=44)       4.527   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc[0]
+    SLICE_X20Y42.A          Tilo                  0.124   USER_IO_28_OBUF
+                                                          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rmesg_mux_inst/O<31>1
+    PS7_X0Y0.MAXIGP0RDATA28 net (fanout=1)        2.186   zynq_ps_i/axi4lite_0_S_RDATA[28]
+    PS7_X0Y0.MAXIGP0ACLK    Tpssdck_MAXIGP0RDATA  0.550   zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+                                                          zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+    ----------------------------------------------------  ---------------------------
+    Total                                         7.843ns (1.130ns logic, 6.713ns route)
+                                                          (14.4% logic, 85.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.833ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.141ns (Levels of Logic = 6)
+  Clock Path Skew:      0.009ns (1.557 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.AQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.A3      net (fanout=67)       1.887   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y106.B5     net (fanout=2)        0.299   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW1
+    SLICE_X26Y106.B2     net (fanout=1)        1.239   zynq_ps_i/axi4lite_0/N58
+    SLICE_X26Y106.CLK    Tas                   0.043   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    -------------------------------------------------  ---------------------------
+    Total                                      8.141ns (1.409ns logic, 6.732ns route)
+                                                       (17.3% logic, 82.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.849ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.128ns (Levels of Logic = 6)
+  Clock Path Skew:      0.012ns (1.556 - 1.544)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y51.CQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt[3]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3
+    SLICE_X27Y72.A1      net (fanout=7)        1.771   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt[3]
+    SLICE_X27Y72.AMUX    Tilo                  0.354   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y107.C1     net (fanout=2)        0.824   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y107.C      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1
+    SLICE_X27Y108.C6     net (fanout=3)        0.765   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_arready
+    SLICE_X27Y108.CLK    Tas                   0.093   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0_glue_set
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.128ns (1.461ns logic, 6.667ns route)
+                                                       (18.0% logic, 82.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.885ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.089ns (Levels of Logic = 6)
+  Clock Path Skew:      0.009ns (1.557 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.CQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.A4      net (fanout=61)       1.835   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y106.B5     net (fanout=2)        0.299   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW1
+    SLICE_X26Y106.B2     net (fanout=1)        1.239   zynq_ps_i/axi4lite_0/N58
+    SLICE_X26Y106.CLK    Tas                   0.043   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    -------------------------------------------------  ---------------------------
+    Total                                      8.089ns (1.409ns logic, 6.680ns route)
+                                                       (17.4% logic, 82.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.911ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.745ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.309ns (1.382 - 1.691)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y107.DQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1
+    SLICE_X26Y79.B2      net (fanout=8)        2.187   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y72.C5      net (fanout=4)        0.917   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.DX      net (fanout=2)        0.512   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.058   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.745ns (1.608ns logic, 6.137ns route)
+                                                       (20.8% logic, 79.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.912ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.744ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.309ns (1.382 - 1.691)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y107.DQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1
+    SLICE_X26Y79.B2      net (fanout=8)        2.187   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y72.C5      net (fanout=4)        0.917   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.AX      net (fanout=2)        0.502   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.067   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.744ns (1.617ns logic, 6.127ns route)
+                                                       (20.9% logic, 79.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.950ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.661ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.354ns (1.382 - 1.736)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y101.DMUX   Tshcko                0.652   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y85.A3      net (fanout=3)        1.623   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y85.A       Tilo                  0.124   USER_IO_10_OBUF
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_awvalid<0>1
+    SLICE_X26Y72.C1      net (fanout=2)        1.263   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_AWADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.DX      net (fanout=2)        0.512   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.058   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.661ns (1.742ns logic, 5.919ns route)
+                                                       (22.7% logic, 77.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.951ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.660ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.354ns (1.382 - 1.736)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y101.DMUX   Tshcko                0.652   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y85.A3      net (fanout=3)        1.623   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y85.A       Tilo                  0.124   USER_IO_10_OBUF
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_awvalid<0>1
+    SLICE_X26Y72.C1      net (fanout=2)        1.263   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_AWADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.AX      net (fanout=2)        0.502   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.067   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.660ns (1.751ns logic, 5.909ns route)
+                                                       (22.9% logic, 77.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.951ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.027ns (Levels of Logic = 6)
+  Clock Path Skew:      0.013ns (1.557 - 1.544)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y51.CQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt[3]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3
+    SLICE_X27Y72.A1      net (fanout=7)        1.771   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt[3]
+    SLICE_X27Y72.AMUX    Tilo                  0.354   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y106.B5     net (fanout=2)        0.299   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y106.B      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW1
+    SLICE_X26Y106.B2     net (fanout=1)        1.239   zynq_ps_i/axi4lite_0/N58
+    SLICE_X26Y106.CLK    Tas                   0.043   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    -------------------------------------------------  ---------------------------
+    Total                                      8.027ns (1.411ns logic, 6.616ns route)
+                                                       (17.6% logic, 82.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.960ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.653ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.352ns (1.382 - 1.734)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y108.DQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d[2]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2
+    SLICE_X26Y85.A5      net (fanout=11)       1.749   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d[2]
+    SLICE_X26Y85.A       Tilo                  0.124   USER_IO_10_OBUF
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_awvalid<0>1
+    SLICE_X26Y72.C1      net (fanout=2)        1.263   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_AWADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.DX      net (fanout=2)        0.512   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.058   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.653ns (1.608ns logic, 6.045ns route)
+                                                       (21.0% logic, 79.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.961ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.652ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.352ns (1.382 - 1.734)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y108.DQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d[2]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2
+    SLICE_X26Y85.A5      net (fanout=11)       1.749   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d[2]
+    SLICE_X26Y85.A       Tilo                  0.124   USER_IO_10_OBUF
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_awvalid<0>1
+    SLICE_X26Y72.C1      net (fanout=2)        1.263   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_AWADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.AX      net (fanout=2)        0.502   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.067   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.652ns (1.617ns logic, 6.035ns route)
+                                                       (21.1% logic, 78.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.003ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.626ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.336ns (1.382 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y79.B1      net (fanout=11)       2.778   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y58.B5      net (fanout=4)        1.524   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y58.BMUX    Tilo                  0.341   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_req1
+    SLICE_X27Y58.A5      net (fanout=4)        0.441   zynq_ps_i/axi4lite_0_M_ARVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.DX      net (fanout=2)        0.512   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.058   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.626ns (1.701ns logic, 5.925ns route)
+                                                       (22.3% logic, 77.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.004ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.625ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.336ns (1.382 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y79.B1      net (fanout=11)       2.778   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y58.B5      net (fanout=4)        1.524   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y58.BMUX    Tilo                  0.341   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_req1
+    SLICE_X27Y58.A5      net (fanout=4)        0.441   zynq_ps_i/axi4lite_0_M_ARVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.AX      net (fanout=2)        0.502   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.067   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.625ns (1.710ns logic, 5.915ns route)
+                                                       (22.4% logic, 77.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.005ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0 (FF)
+  Destination:          zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i (OTHER)
+  Requirement:          10.000ns
+  Data Path Delay:      7.666ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.294ns (1.424 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0 to zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X27Y127.AQ        Tcko                  0.456   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc[1]
+                                                          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0
+    SLICE_X21Y43.C2         net (fanout=44)       4.382   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc[0]
+    SLICE_X21Y43.C          Tilo                  0.124   zynq_ps_i/axi4lite_0_S_RDATA[31]
+                                                          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_rmesg_mux_inst/O<34>1
+    PS7_X0Y0.MAXIGP0RDATA31 net (fanout=1)        2.154   zynq_ps_i/axi4lite_0_S_RDATA[31]
+    PS7_X0Y0.MAXIGP0ACLK    Tpssdck_MAXIGP0RDATA  0.550   zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+                                                          zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i
+    ----------------------------------------------------  ---------------------------
+    Total                                         7.666ns (1.130ns logic, 6.536ns route)
+                                                          (14.7% logic, 85.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.012ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.919ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.034ns (1.514 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.AQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.A3      net (fanout=67)       1.887   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y107.C1     net (fanout=2)        0.824   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y107.C      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1
+    SLICE_X38Y107.D4     net (fanout=3)        0.490   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_arready
+    SLICE_X38Y107.CLK    Tas                   0.045   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1_rstpot
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.919ns (1.411ns logic, 6.508ns route)
+                                                       (17.8% logic, 82.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.064ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.867ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.034ns (1.514 - 1.548)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.CQ      Tcko                  0.518   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.A4      net (fanout=61)       1.835   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    SLICE_X27Y72.AMUX    Tilo                  0.352   zynq_ps_i/axi4lite_0_M_AWREADY[0]
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1
+    SLICE_X26Y77.B4      net (fanout=2)        0.847   zynq_ps_i/axi4lite_0_M_ARREADY[0]
+    SLICE_X26Y77.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1_SW0
+    SLICE_X26Y77.A4      net (fanout=1)        0.452   zynq_ps_i/axi4lite_0/N41
+    SLICE_X26Y77.A       Tilo                  0.124   zynq_ps_i/axi4lite_0/N41
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_ARREADY1
+    SLICE_X38Y106.A1     net (fanout=2)        2.008   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[1]
+    SLICE_X38Y106.A      Tilo                  0.124   zynq_ps_i/axi4lite_0/N58
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1_SW0
+    SLICE_X38Y107.C1     net (fanout=2)        0.824   zynq_ps_i/axi4lite_0/N39
+    SLICE_X38Y107.C      Tilo                  0.124   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/out1
+    SLICE_X38Y107.D4     net (fanout=3)        0.490   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/aa_arready
+    SLICE_X38Y107.CLK    Tas                   0.045   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1_rstpot
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.867ns (1.411ns logic, 6.456ns route)
+                                                       (17.9% logic, 82.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.090ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.545ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.330ns (1.388 - 1.718)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y127.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[1]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0
+    SLICE_X26Y85.A2      net (fanout=11)       2.575   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot[0]
+    SLICE_X26Y85.A       Tilo                  0.124   USER_IO_10_OBUF
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_awvalid<0>1
+    SLICE_X26Y72.C1      net (fanout=2)        1.263   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_AWADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X30Y51.A1      net (fanout=3)        1.653   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X30Y51.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_rstpot
+    SLICE_X31Y51.DX      net (fanout=1)        0.522   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_rstpot
+    SLICE_X31Y51.CLK     Tdick                 0.040   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.545ns (1.054ns logic, 6.491ns route)
+                                                       (14.0% logic, 86.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.095ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.516ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.354ns (1.382 - 1.736)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y101.DMUX   Tshcko                0.652   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y79.B3      net (fanout=3)        1.824   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y72.C5      net (fanout=4)        0.917   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.DX      net (fanout=2)        0.512   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.058   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.516ns (1.742ns logic, 5.774ns route)
+                                                       (23.2% logic, 76.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.096ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 (FF)
+  Destination:          zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.515ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.354ns (1.382 - 1.736)
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1 to zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y101.DMUX   Tshcko                0.652   zynq_ps_i/axi4lite_0_S_WREADY
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y79.B3      net (fanout=3)        1.824   zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1
+    SLICE_X26Y79.B       Tilo                  0.124   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/mi_arvalid<0>1
+    SLICE_X26Y72.C5      net (fanout=4)        0.917   zynq_ps_i/axi4lite_0/DEBUG_MC_MP_ARADDRCONTROL[0]
+    SLICE_X26Y72.C       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n011611
+    SLICE_X26Y72.D4      net (fanout=2)        0.478   zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/_n01161
+    SLICE_X26Y72.D       Tilo                  0.124   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_req1
+    SLICE_X27Y58.A1      net (fanout=3)        1.373   zynq_ps_i/axi4lite_0_M_AWVALID[0]
+    SLICE_X27Y58.A       Tilo                  0.124   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.D1      net (fanout=1)        0.670   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1
+    SLICE_X27Y58.CMUX    Topdc                 0.536   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3_F
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3
+    SLICE_X27Y58.AX      net (fanout=2)        0.502   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In
+    SLICE_X27Y58.CLK     Tdick                 0.067   zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                                       zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.515ns (1.751ns logic, 5.764ns route)
+                                                       (23.3% logic, 76.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_4/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_4/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_5/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_5/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_6/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_6/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_7/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[7]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_7/CLK
+  Location pin: SLICE_X34Y77.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_0/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_0/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_1/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_1/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_2/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_2/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_3/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 8.040ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.980ns (Tmpw)
+  Physical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In[3]/CLK
+  Logical resource: zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_3/CLK
+  Location pin: SLICE_X36Y69.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_0/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_0/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_0/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_1/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_1/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_1/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_2/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_2/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_2/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_3/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_3/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt[3]/CLK
+  Logical resource: zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_3/CK
+  Location pin: SLICE_X35Y127.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: USER_IO_21_OBUF/CLK
+  Logical resource: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_20/CK
+  Location pin: SLICE_X14Y48.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: USER_IO_21_OBUF/CLK
+  Logical resource: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_20/CK
+  Location pin: SLICE_X14Y48.CLK
+  Clock network: zynq_ps_i/processing_system7_0_FCLK_CLK0
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi4lite_0_reset_resync_path" TIG;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+Delay:                  1.118ns (data path - clock path skew + uncertainty)
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1 (FF)
+  Data Path Delay:      1.083ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0 to zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y107.AQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync[2]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0
+    SLICE_X58Y107.BX     net (fanout=1)        0.520   zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync[0]
+    SLICE_X58Y107.CLK    Tdick                 0.045   zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync[2]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.083ns (0.563ns logic, 0.520ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Delay:                  1.100ns (data path - clock path skew + uncertainty)
+  Source:               zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1 (FF)
+  Destination:          zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2 (FF)
+  Data Path Delay:      1.065ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 0.000ns
+  Destination Clock:    zynq_ps_i/processing_system7_0_FCLK_CLK0 rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1 to zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y107.BQ     Tcko                  0.518   zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync[2]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1
+    SLICE_X58Y107.CX     net (fanout=1)        0.519   zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync[1]
+    SLICE_X58Y107.CLK    Tdick                 0.028   zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync[2]
+                                                       zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.065ns (0.546ns logic, 0.519ns route)
+                                                       (51.3% logic, 48.7% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 3022 paths, 0 nets, and 1737 connections
+
+Design statistics:
+   Minimum period:   8.888ns{1}   (Maximum frequency: 112.511MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Jan 24 22:56:38 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 623 MB
+
+
+

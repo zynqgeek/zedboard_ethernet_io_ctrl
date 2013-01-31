@@ -1,0 +1,52 @@
+Release 14.4 ngdbuild P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -p xc7z020clg484-1 -dd _ngo -uc zynq_ps_stub.ucf zynq_ps_stub.edf
+
+Executing edif2ngd -quiet "zynq_ps_stub.edf" "_ngo\zynq_ps_stub.ngo"
+Release 14.4 - edif2ngd P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading NGO file
+"C:/Xilinx/projects/eth_2_io/eth_2_io.runs/impl_1/_ngo/zynq_ps_stub.ngo" ...
+Gathering constraint information from source properties...
+Done.
+INFO:NgdBuild:649 - Removing redundant 'IBUF' symbol
+   'processing_system7_0_PS_PORB_IBUF'.  All constraints associated with this
+   symbol will be ignored.
+INFO:NgdBuild:649 - Removing redundant 'IBUF' symbol
+   'processing_system7_0_PS_CLK_IBUF'.  All constraints associated with this
+   symbol will be ignored.
+INFO:NgdBuild:649 - Removing redundant 'IBUF' symbol
+   'processing_system7_0_PS_SRSTB_IBUF'.  All constraints associated with this
+   symbol will be ignored.
+
+Annotating constraints to design from ucf file "zynq_ps_stub.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP axi4lite_0_reset_source =  
+   FFS  PADS  CPUS;> [zynq_ps_stub.ucf(544)]: CPUS "*" does not match any design
+   objects.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 229744 kilobytes
+
+Writing NGD file "zynq_ps_stub.ngd" ...
+Total REAL time to NGDBUILD completion:  17 sec
+Total CPU time to NGDBUILD completion:   12 sec
+
+Writing NGDBUILD log file "zynq_ps_stub.bld"...

@@ -1,0 +1,67 @@
+
+##################
+# PMOD JA Port
+##################
+NET USER_IO<0>           LOC = Y11  | IOSTANDARD=LVCMOS33;  # "JA1"
+NET USER_IO<1>           LOC = AA11 | IOSTANDARD=LVCMOS33;  # "JA2"
+NET USER_IO<2>           LOC = Y10  | IOSTANDARD=LVCMOS33;  # "JA3"
+NET USER_IO<3>           LOC = AA9  | IOSTANDARD=LVCMOS33;  # "JA4"
+# JA5 = VCC
+# JA6 = GND
+NET USER_IO<4>           LOC = AB11 | IOSTANDARD=LVCMOS33;  # "JA7"
+NET USER_IO<5>           LOC = AB10 | IOSTANDARD=LVCMOS33;  # "JA8"
+NET USER_IO<6>           LOC = AB9  | IOSTANDARD=LVCMOS33;  # "JA9"
+NET USER_IO<7>           LOC = AA8  | IOSTANDARD=LVCMOS33;  # "JA10"
+# JA11 = GND
+# JA12 = VCC
+
+
+##################
+# PMOD JB Port
+##################
+NET USER_IO<8>            LOC = W12  | IOSTANDARD=LVCMOS33;  # "JB1"
+NET USER_IO<9>            LOC = W11  | IOSTANDARD=LVCMOS33;  # "JB2"
+NET USER_IO<10>           LOC = V10  | IOSTANDARD=LVCMOS33;  # "JB3"
+NET USER_IO<11>           LOC = W8   | IOSTANDARD=LVCMOS33;  # "JB4"
+# JB5 = VCC
+# JB6 = GND 
+NET USER_IO<12>           LOC = V12  | IOSTANDARD=LVCMOS33;  # "JB7"
+NET USER_IO<13>           LOC = W10  | IOSTANDARD=LVCMOS33;  # "JB8"
+NET USER_IO<14>           LOC = V9   | IOSTANDARD=LVCMOS33;  # "JB9"
+NET USER_IO<15>           LOC = V8   | IOSTANDARD=LVCMOS33;  # "JB10"
+# JB11 = GND
+# JB12 = VCC
+
+
+##################
+# PMOD JC Port
+##################
+NET USER_IO<16>         LOC = AB6  | IOSTANDARD=LVCMOS33;  # "JC1_N" "JC1"
+NET USER_IO<17>         LOC = AB7  | IOSTANDARD=LVCMOS33;  # "JC1_P" "JC2"
+NET USER_IO<18>         LOC = AA4  | IOSTANDARD=LVCMOS33;  # "JC2_N" "JC3"
+NET USER_IO<19>         LOC = Y4   | IOSTANDARD=LVCMOS33;  # "JC2_P" "JC4"
+# JC5 = VCC
+# JC6 = GND
+NET USER_IO<20>         LOC = T6   | IOSTANDARD=LVCMOS33;  # "JC3_N" "JC7"
+NET USER_IO<21>         LOC = R6   | IOSTANDARD=LVCMOS33;  # "JC3_P" "JC8"
+NET USER_IO<22>         LOC = U4   | IOSTANDARD=LVCMOS33;  # "JC4_N" "JC9"
+NET USER_IO<23>         LOC = T4   | IOSTANDARD=LVCMOS33;  # "JC4_P" "JC10"
+# JC11 = GND
+# JC12 = VCC
+
+
+##################
+# PMOD JD Port
+##################
+NET USER_IO<24>         LOC = W7   | IOSTANDARD=LVCMOS33;  # "JD1_N" "JD1"
+NET USER_IO<25>         LOC = V7   | IOSTANDARD=LVCMOS33;  # "JD1_P" "JD2"
+NET USER_IO<26>         LOC = V4   | IOSTANDARD=LVCMOS33;  # "JD2_N" "JD3"
+NET USER_IO<27>         LOC = V5   | IOSTANDARD=LVCMOS33;  # "JD2_P" "JD4"
+# JD5 = VCC
+# JD6 = GND
+NET USER_IO<28>         LOC = W5   | IOSTANDARD=LVCMOS33;  # "JD3_N" "JD5"
+NET USER_IO<29>         LOC = W6   | IOSTANDARD=LVCMOS33;  # "JD3_P" "JD6"
+NET USER_IO<30>         LOC = U5   | IOSTANDARD=LVCMOS33;  # "JD4_N" "JD7"
+NET USER_IO<31>         LOC = U6   | IOSTANDARD=LVCMOS33;  # "JD4_P" "JD8"
+# JD11 = GND
+s# JD12 = VCCs

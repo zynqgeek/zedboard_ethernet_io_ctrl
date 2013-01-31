@@ -1,0 +1,8 @@
+Release 14.4 Drc P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Thu Jan 24 22:58:40 2013
+
+drc -z zynq_ps_stub_routed.ncd zynq_ps_stub.pcf
+
+DRC detected 0 errors and 0 warnings.

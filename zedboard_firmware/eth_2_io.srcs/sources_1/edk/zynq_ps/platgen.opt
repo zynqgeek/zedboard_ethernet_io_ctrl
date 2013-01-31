@@ -1,0 +1,13 @@
+-p
+xc7z020clg484-1
+-lang
+vhdl
+-intstyle
+pa
+-toplevel
+no
+-ti
+zynq_ps_i
+-msg
+__xps/ise/xmsgprops.lst
+zynq_ps.mhs

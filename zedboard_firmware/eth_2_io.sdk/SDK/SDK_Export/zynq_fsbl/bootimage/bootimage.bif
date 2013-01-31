@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]/Xilinx/projects/eth_2_io/eth_2_io.sdk/SDK/SDK_Export/zynq_fsbl/Debug/zynq_fsbl.elf
+	/Xilinx/projects/eth_2_io/eth_2_io.runs/impl_1/zynq_ps_stub.bit
+	/Xilinx/projects/eth_2_io/eth_2_io.sdk/SDK/SDK_Export/lwip_example/Debug/lwip_example.elf
+}

@@ -1,0 +1,389 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: zynq_ps_stub.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "zynq_ps_stub.prj"
+
+---- Target Parameters
+Target Device                      : xc7z020clg484-1
+Output File Name                   : "zynq_ps_stub.ngc"
+
+---- Source Options
+Top Module Name                    : zynq_ps_stub
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+---- Other Options
+Cores Search Directories           : {..\..\eth_2_io.srcs\sources_1\edk\zynq_ps\implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/Xilinx/projects/eth_2_io/eth_2_io.srcs/sources_1/edk/zynq_ps/hdl/zynq_ps.vhd" into library work
+Parsing entity <zynq_ps>.
+Parsing architecture <STRUCTURE> of entity <zynq_ps>.
+Parsing VHDL file "C:/Xilinx/projects/eth_2_io/eth_2_io.srcs/sources_1/edk/zynq_ps/zynq_ps_stub.vhd" into library work
+Parsing entity <zynq_ps_stub>.
+Parsing architecture <STRUCTURE> of entity <zynq_ps_stub>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <zynq_ps_stub> (architecture <STRUCTURE>) from library <work>.
+
+Elaborating entity <zynq_ps> (architecture <>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <zynq_ps_stub>.
+    Related source file is "C:/Xilinx/projects/eth_2_io/eth_2_io.srcs/sources_1/edk/zynq_ps/zynq_ps_stub.vhd".
+    Set property "BOX_TYPE = user_black_box" for instance <zynq_ps_i>.
+    Summary:
+	no macro.
+Unit <zynq_ps_stub> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <..\..\eth_2_io.srcs\sources_1\edk\zynq_ps\implementation/zynq_ps.ngc>.
+Reading core <..\..\eth_2_io.srcs\sources_1\edk\zynq_ps\implementation/zynq_ps_processing_system7_0_wrapper.ngc>.
+Reading core <..\..\eth_2_io.srcs\sources_1\edk\zynq_ps\implementation/zynq_ps_axi4lite_0_wrapper.ngc>.
+Reading core <..\..\eth_2_io.srcs\sources_1\edk\zynq_ps\implementation/zynq_ps_zed_pmod_io_0_wrapper.ngc>.
+Reading core <..\..\eth_2_io.srcs\sources_1\edk\zynq_ps\implementation/zynq_ps_leds_8bits_wrapper.ngc>.
+Loading core <zynq_ps_processing_system7_0_wrapper> for timing and area information for instance <processing_system7_0>.
+Loading core <zynq_ps_axi4lite_0_wrapper> for timing and area information for instance <axi4lite_0>.
+Loading core <zynq_ps_zed_pmod_io_0_wrapper> for timing and area information for instance <zed_pmod_io_0>.
+Loading core <zynq_ps_leds_8bits_wrapper> for timing and area information for instance <LEDs_8Bits>.
+Loading core <zynq_ps> for timing and area information for instance <zynq_ps_i>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+WARNING:Xst:528 - Multi-source in Unit <processing_system7_0> on signal <PS_SRSTB>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_SRSTB>
+   Output port PS7:PSSRSTB of instance <zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i>
+
+WARNING:Xst:528 - Multi-source in Unit <processing_system7_0> on signal <PS_CLK>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_CLK>
+   Output port PS7:PSCLK of instance <zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i>
+
+WARNING:Xst:528 - Multi-source in Unit <processing_system7_0> on signal <PS_PORB>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <processing_system7_0_PS_PORB>
+   Output port PS7:PSPORB of instance <zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i>
+
+Optimizing unit <zynq_ps_stub> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block zynq_ps_stub, actual ratio is 0.
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1> in Unit <zed_pmod_io_0> is equivalent to the following FF/Latch : <zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : zynq_ps_stub.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 505
+#      GND                         : 5
+#      INV                         : 99
+#      LUT2                        : 28
+#      LUT3                        : 79
+#      LUT4                        : 120
+#      LUT5                        : 64
+#      LUT6                        : 91
+#      MUXCY                       : 11
+#      MUXF7                       : 2
+#      VCC                         : 2
+#      XORCY                       : 4
+# FlipFlops/Latches                : 275
+#      FD                          : 49
+#      FDC                         : 9
+#      FDE                         : 69
+#      FDR                         : 43
+#      FDRE                        : 97
+#      FDSE                        : 8
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 43
+#      IBUF                        : 3
+#      OBUF                        : 40
+# Others                           : 1
+#      PS7                         : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             275  out of  106400     0%  
+ Number of Slice LUTs:                  489  out of  53200     0%  
+    Number used as Logic:               481  out of  53200     0%  
+    Number used as Memory:                8  out of  17400     0%  
+       Number used as SRL:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    555
+   Number with an unused Flip Flop:     280  out of    555    50%  
+   Number with an unused LUT:            66  out of    555    11%  
+   Number of fully used LUT-FF pairs:   209  out of    555    37%  
+   Number of unique control sets:        24
+
+IO Utilization: 
+ Number of IOs:                         170
+ Number of bonded IOBs:                  43  out of    200    21%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                              | Clock buffer(FF name)  | Load  |
+--------------------------------------------------------------------------+------------------------+-------+
+zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>| BUFG                   | 283   |
+--------------------------------------------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.972ns (Maximum Frequency: 251.762MHz)
+   Minimum input arrival time before clock: 2.296ns
+   Maximum output required time after clock: 3.225ns
+   Maximum combinational path delay: 0.000ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Clock period: 3.972ns (frequency: 251.762MHz)
+  Total number of paths / destination ports: 3282 / 579
+-------------------------------------------------------------------------
+Delay:               3.972ns (Levels of Logic = 7)
+  Source:            zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (FF)
+  Destination:       zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i (FF)
+  Source Clock:      zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+  Destination Clock: zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 to zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.282   0.648  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt<3>)
+     LUT3:I0->O            3   0.053   0.616  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done1 (S_AXI_AWREADY)
+     end scope: 'zynq_ps_i/zed_pmod_io_0:S_AXI_WREADY'
+     begin scope: 'zynq_ps_i/axi4lite_0:M_AXI_WREADY<0>'
+     LUT3:I0->O            1   0.053   0.635  axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_WREADY1 (DEBUG_MC_MP_WDATACONTROL<1>)
+     LUT6:I2->O            4   0.053   0.433  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i)
+     LUT6:I5->O            3   0.053   0.427  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/w_complete_mux1 (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/w_complete_mux)
+     LUT6:I5->O            1   0.053   0.602  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set_SW2 (N59)
+     LUT6:I3->O            2   0.053   0.000  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_glue_set)
+     FDR:D                     0.011          axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i
+    ----------------------------------------
+    Total                      3.972ns (0.611ns logic, 3.361ns route)
+                                       (15.4% logic, 84.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Total number of paths / destination ports: 341 / 162
+-------------------------------------------------------------------------
+Offset:              2.296ns (Levels of Logic = 5)
+  Source:            zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WVALID (PAD)
+  Destination:       zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1 (FF)
+  Destination Clock: zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WVALID to zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    PS7:MAXIGP0WVALID      7   0.000   0.000  processing_system7_0/PS7_i (M_AXI_GP0_WVALID)
+     end scope: 'zynq_ps_i/processing_system7_0:M_AXI_GP0_WVALID'
+     begin scope: 'zynq_ps_i/axi4lite_0:S_AXI_WVALID<0>'
+     LUT6:I0->O            2   0.053   0.608  axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/M_AXI_WVALID1 (M_AXI_WVALID<1>)
+     end scope: 'zynq_ps_i/axi4lite_0:M_AXI_WVALID<1>'
+     begin scope: 'zynq_ps_i/LEDs_8Bits:S_AXI_WVALID'
+     LUT3:I0->O            1   0.053   0.739  LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1 (LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In1)
+     LUT6:I0->O            1   0.053   0.000  LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In3 (LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1-In)
+     FDR:D                     0.011          LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1
+    ----------------------------------------
+    Total                      2.296ns (0.949ns logic, 1.347ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
+  Total number of paths / destination ports: 222 / 106
+-------------------------------------------------------------------------
+Offset:              3.225ns (Levels of Logic = 6)
+  Source:            zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (FF)
+  Destination:       zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WREADY (PAD)
+  Source Clock:      zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
+
+  Data Path: zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 to zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i:MAXIGP0WREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.282   0.648  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3 (zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt<3>)
+     LUT3:I0->O            3   0.053   0.616  zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done1 (S_AXI_AWREADY)
+     end scope: 'zynq_ps_i/zed_pmod_io_0:S_AXI_WREADY'
+     begin scope: 'zynq_ps_i/axi4lite_0:M_AXI_WREADY<0>'
+     LUT3:I0->O            1   0.053   0.635  axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/S_AXI_WREADY1 (DEBUG_MC_MP_WDATACONTROL<1>)
+     LUT6:I2->O            4   0.053   0.433  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i (axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.mi_wready_mux_inst/o_i)
+     LUT5:I4->O            1   0.053   0.399  axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/si_wready1 (DEBUG_SF_CB_WDATACONTROL<1>)
+     end scope: 'zynq_ps_i/axi4lite_0:S_AXI_WREADY<0>'
+     begin scope: 'zynq_ps_i/processing_system7_0:M_AXI_GP0_WREADY'
+    PS7:MAXIGP0WREADY          0.000          processing_system7_0/PS7_i
+    ----------------------------------------
+    Total                      3.225ns (0.494ns logic, 2.731ns route)
+                                       (15.3% logic, 84.7% route)
+
+=========================================================================
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>
+--------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------------------------+---------+---------+---------+---------+
+zynq_ps_i/processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|    3.972|         |         |         |
+--------------------------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.31 secs
+ 
+--> 
+
+Total memory usage is 486056 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

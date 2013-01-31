@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\pcores\zed_pmod_io_v1_00_a\devl\synthesis\zed_pmod_io_xst.prj"
+-top zed_pmod_io
+-p virtex6
+-ofn "C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps\pcores\zed_pmod_io_v1_00_a\devl\synthesis\zed_pmod_io_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib zed_pmod_io_v1_00_a

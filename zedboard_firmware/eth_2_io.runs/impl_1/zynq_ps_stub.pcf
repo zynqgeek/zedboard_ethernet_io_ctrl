@@ -1,0 +1,569 @@
+//! **************************************************************************
+// Written by: Map P.49d on Thu Jan 24 22:55:58 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "processing_system7_0_DDR_ODT" LOCATE = SITE "P5" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[13]" LOCATE = SITE "F4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[14]" LOCATE = SITE "G4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[11]" LOCATE = SITE "G5" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[12]" LOCATE = SITE "H4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[10]" LOCATE = SITE "J3" LEVEL 1;
+COMP "processing_system7_0_DDR_WEB_pin" LOCATE = SITE "R4" LEVEL 1;
+COMP "processing_system7_0_MIO[24]" LOCATE = SITE "B7" LEVEL 1;
+COMP "processing_system7_0_MIO[23]" LOCATE = SITE "E11" LEVEL 1;
+COMP "processing_system7_0_MIO[26]" LOCATE = SITE "A13" LEVEL 1;
+COMP "processing_system7_0_MIO[25]" LOCATE = SITE "F12" LEVEL 1;
+COMP "processing_system7_0_MIO[28]" LOCATE = SITE "A12" LEVEL 1;
+COMP "processing_system7_0_MIO[27]" LOCATE = SITE "D7" LEVEL 1;
+COMP "processing_system7_0_MIO[29]" LOCATE = SITE "E8" LEVEL 1;
+COMP "processing_system7_0_MIO[20]" LOCATE = SITE "A8" LEVEL 1;
+COMP "processing_system7_0_MIO[22]" LOCATE = SITE "A14" LEVEL 1;
+COMP "processing_system7_0_MIO[21]" LOCATE = SITE "F11" LEVEL 1;
+COMP "processing_system7_0_MIO[14]" LOCATE = SITE "B6" LEVEL 1;
+COMP "processing_system7_0_MIO[13]" LOCATE = SITE "A6" LEVEL 1;
+COMP "processing_system7_0_MIO[16]" LOCATE = SITE "D6" LEVEL 1;
+COMP "processing_system7_0_MIO[15]" LOCATE = SITE "E6" LEVEL 1;
+COMP "processing_system7_0_MIO[18]" LOCATE = SITE "A7" LEVEL 1;
+COMP "processing_system7_0_MIO[17]" LOCATE = SITE "E9" LEVEL 1;
+COMP "processing_system7_0_MIO[19]" LOCATE = SITE "E10" LEVEL 1;
+COMP "processing_system7_0_MIO[10]" LOCATE = SITE "G7" LEVEL 1;
+COMP "processing_system7_0_MIO[12]" LOCATE = SITE "C5" LEVEL 1;
+COMP "processing_system7_0_DDR_CAS_n" LOCATE = SITE "P3" LEVEL 1;
+COMP "processing_system7_0_MIO[11]" LOCATE = SITE "B4" LEVEL 1;
+COMP "processing_system7_0_MIO[44]" LOCATE = SITE "E13" LEVEL 1;
+COMP "processing_system7_0_MIO[43]" LOCATE = SITE "B11" LEVEL 1;
+COMP "processing_system7_0_MIO[46]" LOCATE = SITE "D12" LEVEL 1;
+COMP "processing_system7_0_MIO[45]" LOCATE = SITE "B9" LEVEL 1;
+COMP "processing_system7_0_MIO[48]" LOCATE = SITE "D11" LEVEL 1;
+COMP "processing_system7_0_MIO[47]" LOCATE = SITE "B10" LEVEL 1;
+COMP "processing_system7_0_MIO[49]" LOCATE = SITE "C14" LEVEL 1;
+COMP "processing_system7_0_MIO[40]" LOCATE = SITE "E14" LEVEL 1;
+COMP "processing_system7_0_DDR_BankAddr[0]" LOCATE = SITE "L7" LEVEL 1;
+COMP "processing_system7_0_MIO[42]" LOCATE = SITE "D8" LEVEL 1;
+COMP "processing_system7_0_DDR_BankAddr[1]" LOCATE = SITE "L6" LEVEL 1;
+COMP "processing_system7_0_MIO[41]" LOCATE = SITE "C8" LEVEL 1;
+COMP "processing_system7_0_DDR_BankAddr[2]" LOCATE = SITE "M6" LEVEL 1;
+COMP "processing_system7_0_MIO[34]" LOCATE = SITE "B12" LEVEL 1;
+COMP "processing_system7_0_MIO[33]" LOCATE = SITE "G13" LEVEL 1;
+COMP "processing_system7_0_MIO[36]" LOCATE = SITE "A9" LEVEL 1;
+COMP "processing_system7_0_MIO[35]" LOCATE = SITE "F14" LEVEL 1;
+COMP "processing_system7_0_MIO[38]" LOCATE = SITE "F13" LEVEL 1;
+COMP "processing_system7_0_MIO[37]" LOCATE = SITE "B14" LEVEL 1;
+COMP "processing_system7_0_MIO[39]" LOCATE = SITE "C13" LEVEL 1;
+COMP "processing_system7_0_MIO[30]" LOCATE = SITE "A11" LEVEL 1;
+COMP "processing_system7_0_MIO[32]" LOCATE = SITE "C7" LEVEL 1;
+COMP "processing_system7_0_MIO[31]" LOCATE = SITE "F9" LEVEL 1;
+COMP "processing_system7_0_DDR_RAS_n" LOCATE = SITE "R5" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n[0]" LOCATE = SITE "D2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n[1]" LOCATE = SITE "J2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n[2]" LOCATE = SITE "P2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[31]" LOCATE = SITE "Y1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n[3]" LOCATE = SITE "W2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[30]" LOCATE = SITE "W3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[22]" LOCATE = SITE "M2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[21]" LOCATE = SITE "T2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[20]" LOCATE = SITE "R3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[26]" LOCATE = SITE "AA1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[25]" LOCATE = SITE "U1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[2]" LOCATE = SITE "B2" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[9]" LOCATE = SITE "H5" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[24]" LOCATE = SITE "AA3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[1]" LOCATE = SITE "C3" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[8]" LOCATE = SITE "J5" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[23]" LOCATE = SITE "R1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[0]" LOCATE = SITE "D1" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[7]" LOCATE = SITE "J6" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[6]" LOCATE = SITE "J7" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[29]" LOCATE = SITE "Y3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[6]" LOCATE = SITE "F2" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[5]" LOCATE = SITE "K5" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[28]" LOCATE = SITE "W1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[5]" LOCATE = SITE "E1" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[4]" LOCATE = SITE "K6" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[27]" LOCATE = SITE "U2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[4]" LOCATE = SITE "E3" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[3]" LOCATE = SITE "L4" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[3]" LOCATE = SITE "D3" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[2]" LOCATE = SITE "K4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[1]" LOCATE = SITE "M5" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[9]" LOCATE = SITE "G1" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr[0]" LOCATE = SITE "M4" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[8]" LOCATE = SITE "G2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[12]" LOCATE = SITE "L3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[7]" LOCATE = SITE "F1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[11]" LOCATE = SITE "L2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[10]" LOCATE = SITE "L1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[16]" LOCATE = SITE "M1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[15]" LOCATE = SITE "K3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[14]" LOCATE = SITE "J1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[13]" LOCATE = SITE "K1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[19]" LOCATE = SITE "T1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[18]" LOCATE = SITE "N3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ[17]" LOCATE = SITE "T3" LEVEL 1;
+COMP "USER_IO[30]" LOCATE = SITE "U5" LEVEL 1;
+COMP "USER_IO[31]" LOCATE = SITE "U6" LEVEL 1;
+COMP "USER_IO[13]" LOCATE = SITE "W10" LEVEL 1;
+COMP "USER_IO[14]" LOCATE = SITE "V9" LEVEL 1;
+COMP "USER_IO[15]" LOCATE = SITE "V8" LEVEL 1;
+COMP "USER_IO[16]" LOCATE = SITE "AB6" LEVEL 1;
+COMP "USER_IO[17]" LOCATE = SITE "AB7" LEVEL 1;
+COMP "USER_IO[18]" LOCATE = SITE "AA4" LEVEL 1;
+COMP "USER_IO[19]" LOCATE = SITE "Y4" LEVEL 1;
+COMP "USER_IO[10]" LOCATE = SITE "V10" LEVEL 1;
+COMP "USER_IO[11]" LOCATE = SITE "W8" LEVEL 1;
+COMP "USER_IO[12]" LOCATE = SITE "V12" LEVEL 1;
+COMP "USER_IO[23]" LOCATE = SITE "T4" LEVEL 1;
+COMP "USER_IO[24]" LOCATE = SITE "W7" LEVEL 1;
+COMP "USER_IO[25]" LOCATE = SITE "V7" LEVEL 1;
+COMP "USER_IO[26]" LOCATE = SITE "V4" LEVEL 1;
+COMP "USER_IO[27]" LOCATE = SITE "V5" LEVEL 1;
+COMP "USER_IO[28]" LOCATE = SITE "W5" LEVEL 1;
+COMP "USER_IO[29]" LOCATE = SITE "W6" LEVEL 1;
+COMP "processing_system7_0_DDR_Clk" LOCATE = SITE "N4" LEVEL 1;
+COMP "USER_IO[20]" LOCATE = SITE "T6" LEVEL 1;
+COMP "USER_IO[21]" LOCATE = SITE "R6" LEVEL 1;
+COMP "USER_IO[22]" LOCATE = SITE "U4" LEVEL 1;
+COMP "processing_system7_0_MIO[4]" LOCATE = SITE "E4" LEVEL 1;
+COMP "processing_system7_0_MIO[3]" LOCATE = SITE "F6" LEVEL 1;
+COMP "processing_system7_0_MIO[6]" LOCATE = SITE "A4" LEVEL 1;
+COMP "processing_system7_0_MIO[5]" LOCATE = SITE "A3" LEVEL 1;
+COMP "processing_system7_0_MIO[8]" LOCATE = SITE "E5" LEVEL 1;
+COMP "processing_system7_0_MIO[7]" LOCATE = SITE "D5" LEVEL 1;
+COMP "processing_system7_0_MIO[9]" LOCATE = SITE "C4" LEVEL 1;
+COMP "processing_system7_0_MIO[0]" LOCATE = SITE "G6" LEVEL 1;
+COMP "processing_system7_0_MIO[2]" LOCATE = SITE "A2" LEVEL 1;
+COMP "processing_system7_0_MIO[1]" LOCATE = SITE "A1" LEVEL 1;
+COMP "processing_system7_0_DDR_VRN" LOCATE = SITE "M7" LEVEL 1;
+COMP "processing_system7_0_DDR_VRP" LOCATE = SITE "N7" LEVEL 1;
+COMP "USER_IO[5]" LOCATE = SITE "AB10" LEVEL 1;
+COMP "USER_IO[6]" LOCATE = SITE "AB9" LEVEL 1;
+COMP "USER_IO[3]" LOCATE = SITE "AA9" LEVEL 1;
+COMP "USER_IO[4]" LOCATE = SITE "AB11" LEVEL 1;
+COMP "USER_IO[9]" LOCATE = SITE "W11" LEVEL 1;
+COMP "processing_system7_0_DDR_Clk_n" LOCATE = SITE "N5" LEVEL 1;
+COMP "USER_IO[7]" LOCATE = SITE "AA8" LEVEL 1;
+COMP "USER_IO[8]" LOCATE = SITE "W12" LEVEL 1;
+COMP "USER_IO[1]" LOCATE = SITE "AA11" LEVEL 1;
+COMP "USER_IO[2]" LOCATE = SITE "Y10" LEVEL 1;
+COMP "USER_IO[0]" LOCATE = SITE "Y11" LEVEL 1;
+COMP "processing_system7_0_DDR_CS_n" LOCATE = SITE "P6" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[7]" LOCATE = SITE "U14" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[6]" LOCATE = SITE "U19" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[5]" LOCATE = SITE "W22" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[4]" LOCATE = SITE "V22" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[3]" LOCATE = SITE "U21" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[2]" LOCATE = SITE "U22" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[1]" LOCATE = SITE "T21" LEVEL 1;
+COMP "LEDs_8Bits_TRI_IO[0]" LOCATE = SITE "T22" LEVEL 1;
+COMP "processing_system7_0_DDR_CKE" LOCATE = SITE "V3" LEVEL 1;
+COMP "processing_system7_0_DDR_DM[2]" LOCATE = SITE "P1" LEVEL 1;
+COMP "processing_system7_0_DDR_DM[1]" LOCATE = SITE "H3" LEVEL 1;
+COMP "processing_system7_0_DDR_DM[0]" LOCATE = SITE "B1" LEVEL 1;
+COMP "processing_system7_0_DDR_DM[3]" LOCATE = SITE "AA2" LEVEL 1;
+COMP "processing_system7_0_MIO[53]" LOCATE = SITE "C12" LEVEL 1;
+COMP "processing_system7_0_MIO[50]" LOCATE = SITE "D13" LEVEL 1;
+COMP "processing_system7_0_MIO[52]" LOCATE = SITE "D10" LEVEL 1;
+COMP "processing_system7_0_MIO[51]" LOCATE = SITE "C10" LEVEL 1;
+COMP "processing_system7_0_DDR_DRSTB" LOCATE = SITE "F3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS[2]" LOCATE = SITE "N2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS[1]" LOCATE = SITE "H2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS[0]" LOCATE = SITE "C2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS[3]" LOCATE = SITE "V2" LEVEL 1;
+PIN zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i_pins<357> = BEL
+        "zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i" PINNAME
+        MAXIGP0ACLK;
+TIMEGRP clk_fpga_0 = BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_active"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[0].register_slice_inst/reset"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_ready_i_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/busy"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_2"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_awready_i"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_arvalid_reg_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/areset_d_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_arready_i"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_awvalid_reg_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[0].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_2"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_3"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_4"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_5"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_6"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_7"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_8"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_9"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_2"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_active"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/reset"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[1].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_active"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cs_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_10"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_11"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_14"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_15"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_20"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_30"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_31"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_32"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_33"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_28"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_34"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_29"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_40"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_35"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_36"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_41"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_37"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_42"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_register_slice_bank/gen_reg_slot[1].register_slice_inst/reset"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_43"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_38"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_44"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_39"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_45"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_46"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_47"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_52"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_53"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/busy"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/write_cs_FSM_FFd1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/write_cs_FSM_FFd2"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_converter_bank/gen_conv_slot[1].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_2"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_3"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_active"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/areset_d_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_rlast_i"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_30"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_29"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_28"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_27"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_26"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_25"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_24"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_23"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_22"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_21"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_20"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_19"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_18"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_17"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_16"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_15"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_14"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_13"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_12"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_11"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_10"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_9"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_8"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_7"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_6"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_5"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_4"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_3"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_31"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_30"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_29"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_28"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_27"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_26"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_25"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_24"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_23"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_22"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_21"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_20"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_19"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_18"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_17"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_16"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_15"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_14"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_13"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_12"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_11"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_10"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_9"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_8"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_7"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_6"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_5"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_4"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_3"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_2"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_1"
+        BEL "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/USER_LOGIC_I/slv_reg0_0"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0_1"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1_1"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
+        BEL
+        "zynq_ps_i/zed_pmod_io_0/zed_pmod_io_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2_1"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_6" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_24" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_25" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_26" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_27" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_28" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_29" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_30" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_data_i_D1_31" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_7"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_6"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_5"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_4"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_3"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_xferAck_Reg" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_0" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_1" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_2" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_3" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_4" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_5" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_6" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_OE_7" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_0" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_1" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_2" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_3" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_4" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_5" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_6" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_Out_7" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/iGPIO_xferAck" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_wrack_i_D1" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/ip2bus_rdack_i_D1" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/bus2ip_reset" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_31" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_29" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_28" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_30" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_27" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_26" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_24" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_7" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/GPIO_DBus_i_25" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_0"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_0" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_1"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_1" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_2"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_2" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_3"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_3" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_4"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_4" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_5"
+        BEL "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/gpio_Data_In_5" BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_6"
+        BEL
+        "zynq_ps_i/LEDs_8Bits/LEDs_8Bits/gpio_core_1/Mshreg_gpio_Data_In_7"
+        PIN
+        "zynq_ps_i/processing_system7_0/processing_system7_0/PS7_i_pins<357>";
+TIMEGRP axi4lite_0_reset_resync = BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1"
+        BEL
+        "zynq_ps_i/axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2";
+TIMEGRP axi4lite_0_reset_source = FFS(*) PADS(*);
+TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 50%;
+PATH TS_axi4lite_0_reset_resync_path = FROM TIMEGRP "axi4lite_0_reset_source"
+        TO TIMEGRP "axi4lite_0_reset_resync";
+PATH "TS_axi4lite_0_reset_resync_path" TIG;
+SCHEMATIC END;
+

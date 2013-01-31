@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          C:\Xilinx\projects\eth_2_io\eth_2_io.srcs\sources_1\edk\zynq_ps/drivers/zed_pmod_io_v1_00_a/data/zed_pmod_io_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Thu Jan 24 22:08:21 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER zed_pmod_io
+
+  OPTION supported_peripherals = (zed_pmod_io);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER
